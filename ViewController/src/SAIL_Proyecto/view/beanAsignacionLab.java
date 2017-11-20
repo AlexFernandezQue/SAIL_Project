@@ -23,7 +23,6 @@ public class beanAsignacionLab {
     int lab;
     int cuatri;
     String annio;
-    String mensaje;
     
     LinkedList<asignacionLaboratorio>listaAsignacionLaboratorio = new LinkedList<asignacionLaboratorio>();
     LinkedList<horario>listaHorario = new LinkedList<horario>();
@@ -33,20 +32,6 @@ public class beanAsignacionLab {
     LinkedList<cuatrimestre>listaCuatrimestre = new LinkedList<cuatrimestre>();
     
     public beanAsignacionLab() {
-    }
-    
-    public String validacion() {
-        boolean valido = true;
-
-        if (this.getAnnio().equals("")){
-            valido = false;
-        }
-        if (valido == false) {
-            this.setMensaje("El campo AÑO no puede quedar en BLANCO");
-        } else {
-            this.setMensaje("DATOS CORRECTAMENTE GUARDADOS");
-        }
-        return "";
     }
 
     public void setCodigo(int codigo) {
@@ -173,13 +158,5 @@ public class beanAsignacionLab {
                    FacesContext fc=FacesContext.getCurrentInstance();
                    fc.getExternalContext().redirect(url);//redirecciona la página  
         return "";
-    }
-
-    public void setMensaje(String mensaje) {
-        this.mensaje = mensaje;
-    }
-
-    public String getMensaje() {
-        return mensaje;
     }
 }
