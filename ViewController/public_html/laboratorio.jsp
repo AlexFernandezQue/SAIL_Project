@@ -56,7 +56,7 @@
                                             
                                     </div>
                                     <div class="col-md-7">
-                                        <h:inputText readonly="true" style="width:150px;"
+                                        <h:inputText style="width:150px;"
                                                      value="#{beanLaboratorio.codigo}"/>
                                         <br><br><br>
                                         <h:inputText readonly="false" style="width:450px;"
@@ -81,6 +81,8 @@
                                                 <f:selectItem itemLabel="Practica"
                                                               itemValue="2"/>
                                         </h:selectOneMenu>
+                                        <br><br><br>
+                                        <h:outputLabel value="#{beanLaboratorio.mensaje}"/>
                                                                         </div>      
                                     
                                 </div>
@@ -93,7 +95,7 @@
                                     <br/><br/><br/><br/>
                                 
                                     <h:commandButton styleClass="btn btn-info" value="Guardar" style="width:80px;"
-                                                     action="#{beanLaboratorio.nuevoLab}"/>
+                                                     action="#{beanLaboratorio.validar}"/>
                                     <br/><br/><br/><br/>
                                     <h:commandButton styleClass="btn btn-info" value="Cancelar" style="width:80px;"/>
                                      <br/><br/><br/><br/>

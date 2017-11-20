@@ -1,5 +1,7 @@
 package SAIL_Proyecto.view;
 
+import DAO.SNMPExceptions;
+
 import SAIL_Proyecto.Laboratorio;
 import SAIL_Proyecto.LaboratorioDB;
 import SAIL_Proyecto.tipoLaboratorio;
@@ -9,12 +11,16 @@ import SAIL_Proyecto.estadoDB;
 
 import java.io.IOException;
 
+import java.sql.SQLException;
+
 import java.util.LinkedList;
 
 import javax.faces.context.FacesContext;
 
+import javax.naming.NamingException;
+
 public class beanLaboratorio {
-    int codigo;
+    String codigo;
     String descripcion;
     int estado;
     int tipoLaboratorio;
@@ -26,12 +32,28 @@ public class beanLaboratorio {
     
     public beanLaboratorio() {
     }
+    
+    public String validar() throws SNMPExceptions, SQLException, NamingException {
+        boolean valido = true;
 
-    public void setCodigo(int codigo) {
+        if (this.getDescripcion().equals("") || this.getCodigo().equals("")){
+            valido = false;
+        }
+        if (valido == false) {
+            this.setMensaje("Los campos CODIGO DE LABORATORIO y DESCRIPCION no pueden quedar en BLANCO");
+            this.setDescripcion("");
+            this.setCodigo("");
+        } else {
+            this.setMensaje("DATOS CORRECTAMENTE GUARDADOS");
+        }
+        return "";
+    }
+
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
-    public int getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 

@@ -90,9 +90,4 @@
     <managed-bean-class>SAIL_Proyecto.view.beanReporteAverias</managed-bean-class>
     <managed-bean-scope>request</managed-bean-scope>
   </managed-bean>
-  <managed-bean>
-    <managed-bean-name>beanAsignarEquipoLab</managed-bean-name>
-    <managed-bean-class>SAIL_Proyecto.view.beanAsignarEquipoLab</managed-bean-class>
-    <managed-bean-scope>request</managed-bean-scope>
-  </managed-bean>
 </faces-config>
