@@ -100,9 +100,12 @@
                                 </h:selectOneMenu>
                                 <br><br>
                                 <h:outputLabel value="Año"/><br>
-                                <h:inputText/>
+                                <h:inputText value="#{beanAsignacionEquipo.annio}"/>
                                  <br><br>
-                                 <h:commandButton styleClass="btn btn-info" value="Buscar" style="width:80px;"/>
+                                 <h:outputLabel value="#{beanAsignacionEquipo.mensaje}"/>
+                                 <br><br>
+                                 <h:commandButton styleClass="btn btn-info" value="Buscar" style="width:80px;"
+                                                  action="#{beanAsignacionEquipo.validarBuscar}"/>
                                                                   
                                 <br/><br/>
                                  

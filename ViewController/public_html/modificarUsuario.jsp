@@ -70,13 +70,17 @@
                                                      
                                         <br></br><br></br>
                                          
-                                        <h:inputText style="width:450px;" readonly="true"
+                                        <h:inputText style="width:450px;" 
                                                      value="#{beanUsuario.correo}"/>
                                          
                                         <br></br><br></br>
                                          
-                                        <h:inputText style="width:450px;" readonly="true"
+                                        <h:inputText style="width:450px;" 
                                                      value="#{beanUsuario.contrasena}"/>
+                                        
+                                        <br></br><br></br>
+                                        
+                                        <h:outputLabel value="#{beanUsuario.mensaje}"/>
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +91,7 @@
                                     <br/><br/><br/><br/>
                                      
                                     <h:commandButton styleClass="btn btn-info" value="Guardar" style="width:80px;"
-                                                     action="#{beanLaboratorio.nuevoLab}"/>
+                                                     action="#{beanUsuario.validarMantenimiento}"/>
                                      
                                     <br/><br/><br/><br/>
                                      

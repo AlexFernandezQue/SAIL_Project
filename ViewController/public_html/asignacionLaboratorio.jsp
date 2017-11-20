@@ -92,7 +92,13 @@
                                 <h:inputText value="#{beanAsignacionLab.annio}"/>
                                 
                                 <br><br><br>
-                                <h:commandButton styleClass="btn btn-info" value="Buscar" style="width:80px;"/>
+                                
+                                <h:outputLabel value="#{beanAsignacionLab.mensaje}"/>
+                                
+                                <br><br><br>
+                                
+                                <h:commandButton styleClass="btn btn-info" value="Buscar" style="width:80px;"
+                                                 action="#{beanAsignacionLab.validacion}"/>
                                 
                                  
                                 <br/><br/>

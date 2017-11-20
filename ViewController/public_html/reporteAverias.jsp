@@ -88,8 +88,12 @@
                                          
                                         <br></br><br></br>
                                          
-                                        <h:inputText readonly="true" style="width:450px;"
+                                        <h:inputText style="width:450px;"
                                                      value="#{beanReporteAverias.descripcion}"/>
+                                        
+                                        <br></br><br></br>
+                                        
+                                        <h:outputLabel value="#{beanReporteAverias.mensaje}"/>
                                     </div>
                                 </div>
                             </div>
@@ -98,7 +102,8 @@
                                  
                                 <br/><br/><br/><br/>
                                  
-                                <h:commandButton styleClass="btn btn-info" value="Guardar" style="width:80px;"/>
+                                <h:commandButton styleClass="btn btn-info" value="Guardar" style="width:80px;"
+                                                 action="#{beanReporteAverias.validar}"/>
                                  
                                 <br/><br/><br/><br/>
                                  

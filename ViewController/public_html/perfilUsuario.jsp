@@ -95,6 +95,10 @@
                                          
                                         <h:inputText style="width:450px;" readonly="true"
                                                      value="#{beanUsuario.respuesta}"/>
+                                                     
+                                        <br></br><br>
+                                        
+                                        <h:outputLabel value="#{beanUsuario.mensaje}"/>
                                     </div>
                                 </div>
                             </div>
@@ -104,7 +108,8 @@
                                      
                                     <br/><br/>
                                      
-                                    <h:commandButton styleClass="btn btn-info" value="Guardar" style="width:150px;"/>
+                                    <h:commandButton styleClass="btn btn-info" value="Guardar" style="width:150px;"
+                                                     action="#{beanUsuario.validarPerfilUsuario}"/>
                                                      
                                                      <br/><br/><br/><br/>
                                      
