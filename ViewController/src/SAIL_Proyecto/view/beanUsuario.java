@@ -1,7 +1,5 @@
 package SAIL_Proyecto.view;
 
-import DAO.SNMPExceptions;
-
 import SAIL_Proyecto.asignacionEquipo;
 import SAIL_Proyecto.estado;
 import SAIL_Proyecto.preguntaClave;
@@ -10,13 +8,9 @@ import SAIL_Proyecto.usuario;
 
 import java.io.IOException;
 
-import java.sql.SQLException;
-
 import java.util.LinkedList;
 
 import javax.faces.context.FacesContext;
-
-import javax.naming.NamingException;
 
 public class beanUsuario {
     String codigo;
@@ -34,68 +28,9 @@ public class beanUsuario {
     LinkedList<preguntaClave>listaPreguntas = new LinkedList<preguntaClave>();
     LinkedList<rol>listaRoles = new LinkedList<rol>();
     LinkedList<usuario>listaUsuario = new LinkedList<usuario>();
-    String mensaje;
     
     public beanUsuario() {
         this.setContrasena("UTN");
-    }
-    
-    public String validarMantenimiento() throws SNMPExceptions, SQLException, NamingException {
-        boolean valido = true;
-
-        if (this.getCodigo().equals("") || this.getNombre().equals("") || this.getCorreo().equals("")){
-            valido = false;
-        }
-        if (valido == false) {
-            this.setMensaje("Los campos NUMERO DE IDENTIFACICION, NOMBRE y CORREO ELECTRONICO no pueden quedar en BLANCO");
-            this.setCodigo("");
-            this.setNombre("");
-            this.setCorreo("");
-        } else {
-            this.setMensaje("DATOS CORRECTAMENTE GUARDADOS");
-        }
-        return "";
-    }
-    
-    public String validarCambioContrasena() throws SNMPExceptions, SQLException, NamingException {
-        boolean valido = true;
-
-        if (this.getAntiguaContrasena().equals("") || this.getNuevaContrasena1().equals("") || this.getNuevaContrasena2().equals("")
-        || this.getRespuesta().equals("")){
-            valido = false;
-        }        
-        if (valido == false) {
-            this.setMensaje("Los campos ANTIGUA CONTRASEÑA, NUEVA CONTRASEÑA y REPITA NUEVA CONTRASEÑA no pueden quedar en BLANCO");
-            this.setAntiguaContrasena("");
-            this.setNuevaContrasena1("");
-            this.setNuevaContrasena2("");
-        } else {
-                if(this.getNuevaContrasena1().trim().equals(this.getNuevaContrasena2().trim())){
-                    this.setMensaje("DATOS CORRECTAMENTE GUARDADOS");
-                }else{
-                    this.setMensaje("Las claves no concuerdan");
-                }            
-        }
-        return "";
-    }
-    
-    public String validarPerfilUsuario() throws SNMPExceptions, SQLException, NamingException {
-        boolean valido = true;
-
-        if (this.getCodigo().equals("") || this.getNombre().equals("") || this.getCorreo().equals("")
-        || this.getRespuesta().equals("")){
-            valido = false;
-        }
-        if (valido == false) {
-            this.setMensaje("Los campos NUMERO DE IDENTIFACICION, NOMBRE, CORREO ELECTRONICO y RESPUESTA no pueden quedar en BLANCO");
-            this.setCodigo("");
-            this.setNombre("");
-            this.setCorreo("");
-            this.setRespuesta("");
-        } else {
-            this.setMensaje("DATOS CORRECTAMENTE GUARDADOS");
-        }
-        return "";
     }
 
     public void setCodigo(String codigo) {
@@ -250,12 +185,5 @@ public class beanUsuario {
         return "";
     }
 
-
-    public void setMensaje(String mensaje) {
-        this.mensaje = mensaje;
-    }
-
-    public String getMensaje() {
-        return mensaje;
-    }
+  
 }

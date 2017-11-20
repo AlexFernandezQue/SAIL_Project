@@ -65,12 +65,12 @@
                                          
                                         <br></br><br></br>
                                          
-                                        <h:inputText style="width:450px;" 
+                                        <h:inputText style="width:450px;" readonly="true"
                                                      value="#{beanUsuario.nuevaContrasena2}"/>
                                          
                                         <br></br><br></br>
+                                         
                                         
-                                        <h:outputLabel value="#{beanUsuario.mensaje}"/>
                                     </div>
                                 </div>
                             </div>
@@ -80,8 +80,7 @@
                                      
                                     <br/><br/>
                                      
-                                    <h:commandButton styleClass="btn btn-info" value="Guardar" style="width:150px;"
-                                                     action="#{beanUsuario.validarCambioContrasena}"/>
+                                    <h:commandButton styleClass="btn btn-info" value="Guardar" style="width:150px;"/>
                                      
                                     <br/><br/><br/><br/>
                                      

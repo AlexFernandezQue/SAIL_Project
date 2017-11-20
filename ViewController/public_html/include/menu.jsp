@@ -50,6 +50,12 @@
 								<li>
 									<a href="equipoEstudiante.jsp">Asignar Equipo a Estudiante</a>				
 								</li>
+                                                                <li>
+									<a href="equipoLaboratorio.jsp">Asignar Equipo a Laboratorio</a>				
+								</li>
+                                                                   <li>
+									<a href="dispositivoLaboratorio.jsp">Asignar Dispositivo a Laboratorio</a>				
+								</li>
 								<li>
 									<a href="">Consultar Disponibilidad</a>				
 								</li>

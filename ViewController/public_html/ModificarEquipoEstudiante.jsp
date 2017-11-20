@@ -57,8 +57,7 @@
                                     </div>
                                     <div class="col-md-7">
                                         <h:inputText  style="width:150px;"
-                                                     value="#{beanAsignacionEquipo.codigo_estudiante}"/>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h:commandButton styleClass="btn btn-info"  value="Buscar"
-                                                                                                                                                                                       action="#{beanAsignacionEquipo.validacion}"/>
+                                                     value="#{beanAsignacionEquipo.codigo_estudiante}"/>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h:commandButton styleClass="btn btn-info"  value="Buscar"/>
                                          
                                         <br></br></br></br>
                                          
@@ -75,10 +74,9 @@
                                             <f:selectItem itemLabel="Maquina 4" itemValue="4"/>
                                         </h:selectOneMenu>
                                          
-                                        <br><br><br>
-                                        <h:outputLabel value="#{beanAsignacionEquipo.mensaje}"/>
-                                    </div>                                     
-                                </div>                                
+                                        
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-2">
                                 <p>
@@ -87,7 +85,7 @@
                                     <br/><br/><br/><br/>
                                      
                                     <h:commandButton styleClass="btn btn-info" value="Guardar" style="width:80px;"
-                                                     action="#{beanAsignacionEquipo.validacion}"/>
+                                                     action="#{beanLaboratorio.nuevoLab}"/>
                                      
                                     <br/><br/><br/><br/>
                                      
